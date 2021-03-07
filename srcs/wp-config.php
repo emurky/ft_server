@@ -20,7 +20,7 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'ft_server');
+define('DB_NAME', 'wordpress');
 
 /** MySQL database username */
 define('DB_USER', 'emurky');
@@ -87,3 +87,5 @@ if ( !defined('ABSPATH') )
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
+
+$_SERVER[“HTTPS”] = “on”;
