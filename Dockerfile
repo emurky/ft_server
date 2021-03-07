@@ -6,7 +6,7 @@
 #    By: emurky <emurky@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/07 07:46:09 by emurky            #+#    #+#              #
-#    Updated: 2021/03/07 11:03:00 by emurky           ###   ########.fr        #
+#    Updated: 2021/03/07 12:42:12 by emurky           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,9 +51,9 @@ RUN			mkdir /etc/nginx/ssl && chmod 700 /etc/nginx/ssl && \
 						-subj "/C=RU/ST=Moscow/L=Moscow/O=21school/OU=student/\
 						emailAddress=emurky@student.21-school.ru/CN=ft_server.com";
 
-
 COPY		srcs/start.sh /usr/local/bin
 COPY		srcs/autoindex.sh /usr/local/bin
 
-CMD			[ "bash", "start.sh" ]
+EXPOSE		80 443
 
+CMD			[ "bash", "start.sh" ]
